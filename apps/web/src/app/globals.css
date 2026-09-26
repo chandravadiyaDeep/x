@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080d17;
+  --surface: #111b30;
+  --surface-2: #16213a;
+  --line: #22304c;
+  --text: #e9eef7;
+  --muted: #8fa0bd;
+  --blue: #4f8cff;
+  --cyan: #31d5c8;
+  --amber: #e0a840;
+  --red: #e07a5f;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(79, 140, 255, 0.14), transparent 60%),
+    radial-gradient(700px 500px at 5% 15%, rgba(49, 213, 200, 0.09), transparent 60%),
+    var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+  color: inherit;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: #04101c;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  color: var(--text);
+  background: none;
+}
+
+.badge {
+  font-size: 11.5px;
+  padding: 3px 9px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge-pass {
+  background: rgba(49, 213, 200, 0.14);
+  color: var(--cyan);
+}
+.badge-warning {
+  background: rgba(224, 168, 64, 0.14);
+  color: var(--amber);
+}
+.badge-critical {
+  background: rgba(224, 122, 95, 0.14);
+  color: var(--red);
+}
+
+.track {
+  height: 8px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.track > span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+}
+
+.input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 13.5px;
+}
+
+.select {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 13.5px;
+}
